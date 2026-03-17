@@ -1,0 +1,55 @@
+{
+    "include": [
+        "~/.config/waybar/modules/battery.jsonc",
+        "~/.config/waybar/modules/clock.jsonc",
+        "~/.config/waybar/modules/network.jsonc",
+        "~/.config/waybar/modules/pulseaudio.jsonc"
+    ],
+
+
+    //layout
+    "modules-center": ["hyprland/window"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["clock","group/hardware", "custom/power"],
+
+    "group/hardware":{
+        "orientation": "vertical",
+		"modules": [
+            "pulseaudio",
+			"network",
+            "battery"
+		]
+    },
+    //options
+    "layer": "top",
+    "position": "left",
+    "reload_style_on_change": true,
+
+    "hyprland/window": {
+        "max-length": 50,
+        "rotate" : 90,
+        "format" : "{initialTitle}",
+        "icon":true
+    },
+
+    "hyprland/workspaces":{
+        "format": "{icon}",
+	    "format-icons": {
+            "active": "",
+            "default": ""
+	    },
+        "persistent-workspaces": {
+            "*": 5 
+        },
+        "workspace-taskbar":{
+            "enable":true,
+            "format": "{icon}",
+            "orientation": "vertical"
+       }
+    },
+
+    "custom/power": {
+		"format": "",
+		"on-click": "poweroff"
+	}
+}
