@@ -1,0 +1,5 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export COLORFILE:/home/thomas/dotfiles/color_nier
+SETUVAR --export STARSHIP_CONFIG:/home/thomas/dotfiles/components/starship\x2etoml
+SETUVAR __fish_initialized:4300
